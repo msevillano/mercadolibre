@@ -1,0 +1,48 @@
+{
+  "name": "serverless-boilerplate",
+  "version": "1.0.0",
+  "description": "Basic template for Serverless project",
+  "main": "./src/public/handler.js",
+  "scripts": {
+    "start": "serverless offline start --skipCacheInvalidation",
+    "test": "jest --coverage",
+    "lint": "eslint --fix '**/*.js'"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "keywords": [
+    "serverless",
+    "node.JS",
+    "ES6",
+    "Jest",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Mauro Sevillano",
+  "license": "MIT License",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msevillano/serverlessBoilerplate"
+  },
+  "dependencies": {
+    "serverless": "^1.48.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.0.1",
+    "eslint-config-google": "^0.13.0",
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.3",
+    "pre-commit": "^1.2.2",
+    "serverless-offline": "^5.8.0",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.36.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
