@@ -20,14 +20,14 @@ custom:
 
 functions:
   calculate:
-    handler: src/function/forecast.calculate
+    handler: src/controller/forecast.calculate
     events:
       - schedule: rate(24 hours)
       - http:
           path: /test
           method: post
   info:
-    handler: src/function/endpoint.getForecast
+    handler: src/controller/endpoint.getForecast
     events:
       - http:
           path: /clima
