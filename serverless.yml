@@ -19,9 +19,16 @@ custom:
     port: 4000
 
 functions:
-  status:
-    handler: src/controller/handler.status
+  calculate:
+    handler: src/function/forecast.calculate
+    events:
+      - schedule: rate(24 hours)
+      - http:
+          path: /test
+          method: post
+  info:
+    handler: src/function/endpoint.getForecast
     events:
       - http:
-          path: /status
-          method: post
+          path: /clima
+          method: get
