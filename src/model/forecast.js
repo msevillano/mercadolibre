@@ -12,6 +12,11 @@ const ForecastSchema = new mongoose.Schema({
   },
 });
 
-const forecastModel = mongoose.model('forecast', ForecastSchema);
+let forecastModel
+try {
+  forecastModel = mongoose.model('forecast');
+} catch (error) {
+  forecastModel = mongoose.model('forecast', ForecastSchema);
+}
 
 export default forecastModel;
