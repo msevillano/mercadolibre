@@ -12,7 +12,7 @@ const ForecastSchema = new mongoose.Schema({
   },
 });
 
-let forecastModel
+let forecastModel;
 try {
   forecastModel = mongoose.model('forecast');
 } catch (error) {
